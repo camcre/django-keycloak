@@ -17,10 +17,10 @@ from django.urls import path
 from django_keycloak import views
 
 urlpatterns = [
-    path(r'^login$', views.Login.as_view(), name='keycloak_login'),
-    path(r'^login-complete$', views.LoginComplete.as_view(),
+    path('/login', views.Login.as_view(), name='keycloak_login'),
+    path('/login-complete', views.LoginComplete.as_view(),
         name='keycloak_login_complete'),
-    path(r'^logout$', views.Logout.as_view(), name='keycloak_logout'),
-    path(r'^session-iframe', views.SessionIframe.as_view(),
+    path('/logout', views.Logout.as_view(), name='keycloak_logout'),
+    path('/session-iframe', views.SessionIframe.as_view(),
         name='keycloak_session_iframe')
 ]
